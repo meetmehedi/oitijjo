@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="বাংলার রাজকীয় ঐতিহ্যবাহী কারুশিল্প — নকশিকাঁথা, শীতলপাটি, মৃৎশিল্প ও তাঁত শিল্পের ইতিহাস, নির্মাণ পদ্ধতি ও কারিগরদের জীবনগাথা।">
+    <title>ঐতিজ্জ্বো — বাংলার রাজকীয় কারুশিল্পের ইতিহাস</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold:        #c9a84c;
+            --gold-light:  #e8c97a;
+            --gold-dark:   #8a6a1a;
+            --parchment:   #f5ead7;
+            --parchment-dark: #e8d5b0;
+            --ink:         #2c1a0e;
+            --ink-light:   #4a2e1a;
+            --terracotta:  #c0522b;
+            --deep-red:    #8b1a1a;
+            --worn-brown:  #6b4423;
+            --cream:       #fdf8f0;
+            --shadow:      rgba(44,26,14,0.4);
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            background-color: var(--parchment-dark);
+            background-image:
+                url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a84c' fill-opacity='0.07'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+                linear-gradient(160deg,#ede0c4 0%,#ddc99a 40%,#e8d5b0 70%,#c9b07a 100%);
+            color: var(--ink);
+            font-family: 'Noto Serif Bengali', Georgia, serif;
+            line-height: 1.9;
+            overflow-x: hidden;
+        }
+
+        /* HERO */
+        .hero {
+            position: relative;
+            text-align: center;
+            padding: 70px 20px 50px;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center,rgba(201,168,76,.18) 0%,transparent 70%);
+            pointer-events: none;
+        }
+        .hero-bar {
+            display: flex; align-items: center; justify-content: center;
+            gap: 10px; margin-bottom: 20px;
+            color: var(--gold-dark); font-size: 1.1rem; letter-spacing: 4px;
+        }
+        .hero-bar::before, .hero-bar::after {
+            content: ''; flex: 1; max-width: 200px; height: 1px;
+            background: linear-gradient(to right, transparent, var(--gold), transparent);
+        }
+        .site-title {
+            font-size: clamp(2.8rem,7vw,5.5rem); font-weight: 700;
+            color: var(--ink);
+            text-shadow: 0 2px 0 var(--gold-light),2px 4px 12px var(--shadow);
+            letter-spacing: 2px; line-height: 1.2; display: inline-block;
+        }
+        .site-title span { color: var(--terracotta); }
+        .site-subtitle {
+            font-size: clamp(.95rem,2vw,1.2rem); color: var(--worn-brown);
+            margin-top: 14px; letter-spacing: 1px; font-style: italic;
+        }
+        .royal-seal {
+            display: inline-flex; align-items: center; justify-content: center;
+            margin-top: 28px; width: 80px; height: 80px; border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%,var(--gold-light),var(--gold-dark));
+            border: 3px solid var(--gold-dark);
+            box-shadow: 0 0 0 6px rgba(201,168,76,.2),0 8px 20px var(--shadow);
+            font-size: 2.4rem;
+            animation: float 4s ease-in-out infinite;
+        }
+        @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+
+        /* STICKY NAV */
+        .sticky-nav {
+            position: sticky; top: 0; z-index: 100;
+            background: rgba(44,26,14,.95); backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--gold-dark);
+            padding: 10px 20px;
+            display: flex; justify-content: center; gap: 6px; flex-wrap: wrap;
+        }
+        .nav-btn {
+            background: transparent; border: 1px solid rgba(201,168,76,.3);
+            color: rgba(232,201,122,.8); font-family: inherit; font-size: .82rem;
+            padding: 5px 14px; border-radius: 20px; cursor: pointer;
+            transition: all .25s ease; text-decoration: none; display: inline-block;
+        }
+        .nav-btn:hover { background: rgba(201,168,76,.15); border-color: var(--gold); color: var(--gold-light); }
+
+        /* ORNAMENT DIVIDER */
+        .ornament {
+            text-align: center; color: var(--gold-dark); font-size: 1.5rem;
+            letter-spacing: 8px; margin: 14px 0 36px;
+            position: relative; user-select: none;
+        }
+        .ornament::before, .ornament::after {
+            content: ''; position: absolute; top: 50%; width: 25%; height: 1.5px;
+            background: linear-gradient(to right,transparent,var(--gold-dark));
+        }
+        .ornament::before { left: 5%; }
+        .ornament::after  { right: 5%; transform: scaleX(-1); }
+
+        /* SCROLL REVEAL */
+        .reveal { opacity: 0; transform: translateY(40px); transition: opacity .8s ease,transform .8s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* PRODUCT CARD */
+        .product-card { max-width: 980px; margin: 0 auto 70px; padding: 0 24px; position: relative; z-index: 1; }
+        .card-inner {
+            background: linear-gradient(180deg,rgba(253,248,240,.97) 0%,rgba(245,234,215,.97) 100%);
+            border: 1.5px solid var(--gold); border-radius: 4px;
+            box-shadow: 0 0 0 6px rgba(201,168,76,.1),0 20px 50px -10px var(--shadow),inset 0 0 60px rgba(201,168,76,.06);
+            overflow: hidden; position: relative;
+        }
+        .card-inner::before {
+            content: ''; position: absolute; inset: 0;
+            background-image: repeating-linear-gradient(0deg,transparent,transparent 28px,rgba(201,168,76,.04) 28px,rgba(201,168,76,.04) 29px);
+            pointer-events: none;
+        }
+        .card-corner { position: absolute; font-size: 1.8rem; color: var(--gold-dark); opacity: .6; line-height: 1; }
+        .card-corner.tl { top: 8px; left: 8px; }
+        .card-corner.tr { top: 8px; right: 8px; }
+        .card-corner.bl { bottom: 8px; left: 8px; }
+        .card-corner.br { bottom: 8px; right: 8px; }
+
+        /* CARD HEADER */
+        .card-header {
+            display: flex; align-items: center; gap: 20px;
+            background: linear-gradient(135deg,var(--ink) 0%,var(--ink-light) 60%,#3d2010 100%);
+            padding: 28px 40px; position: relative; overflow: hidden;
+        }
+        .card-header::after {
+            content: ''; position: absolute; inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c9a84c' fill-opacity='0.06' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+        .card-icon {
+            font-size: 3.2rem; line-height: 1; flex-shrink: 0;
+            filter: drop-shadow(0 2px 6px rgba(0,0,0,.4));
+            animation: pulse-icon 3s ease-in-out infinite;
+        }
+        @keyframes pulse-icon { 0%,100%{transform:scale(1)} 50%{transform:scale(1.08)} }
+        .card-title {
+            font-size: clamp(1.6rem,4vw,2.4rem); font-weight: 700;
+            color: var(--gold-light); text-shadow: 0 2px 8px rgba(0,0,0,.5); line-height: 1.2;
+        }
+        .card-era {
+            font-size: .85rem; color: rgba(232,201,122,.65);
+            letter-spacing: 3px; margin-top: 4px;
+        }
+
+        /* CARD BODY */
+        .card-body { padding: 36px 44px; }
+        .info-section { padding: 28px 0; border-bottom: 1px solid rgba(201,168,76,.25); }
+        .info-section:last-child { border-bottom: none; }
+        .info-label { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+        .info-icon { font-size: 1.4rem; flex-shrink: 0; }
+        .info-heading {
+            font-size: 1.15rem; font-weight: 700; color: var(--deep-red);
+            letter-spacing: .5px; position: relative;
+        }
+        .info-heading::after {
+            content: ''; position: absolute; bottom: -3px; left: 0;
+            width: 100%; height: 1px;
+            background: linear-gradient(to right,var(--deep-red),transparent);
+        }
+        .info-text {
+            font-size: 1.02rem; color: var(--ink-light);
+            text-align: justify; padding-left: 34px; line-height: 2;
+        }
+
+        /* TIMELINE BADGE */
+        .timeline-badge {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: linear-gradient(135deg,var(--gold-dark),var(--terracotta));
+            color: var(--cream); font-size: .78rem; font-weight: 600;
+            padding: 4px 12px; border-radius: 20px; letter-spacing: .5px;
+            margin-bottom: 10px; box-shadow: 0 2px 8px rgba(139,26,26,.3);
+        }
+
+        /* STATS ROW */
+        .stats-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 16px; padding-left: 34px; }
+        .stat-chip {
+            background: rgba(201,168,76,.12); border: 1px solid rgba(201,168,76,.35);
+            border-radius: 6px; padding: 8px 16px; text-align: center; min-width: 110px;
+        }
+        .stat-value { font-size: 1.3rem; font-weight: 700; color: var(--terracotta); line-height: 1.2; display: block; }
+        .stat-label { font-size: .72rem; color: var(--worn-brown); letter-spacing: .5px; display: block; margin-top: 2px; }
+
+        /* QUOTE BOX */
+        .quote-box {
+            margin-top: 28px; padding: 22px 28px;
+            background: linear-gradient(135deg,rgba(139,26,26,.07),rgba(201,168,76,.1));
+            border-left: 4px solid var(--terracotta); border-radius: 0 6px 6px 0; position: relative;
+        }
+        .quote-box::before {
+            content: '\201C'; position: absolute; top: -10px; left: 16px;
+            font-size: 5rem; color: var(--gold-dark); opacity: .2; line-height: 1; font-family: Georgia,serif;
+        }
+        .quote-text { font-style: italic; color: var(--ink-light); font-size: 1rem; position: relative; z-index: 1; }
+
+        /* FOOTER */
+        .page-footer {
+            text-align: center; padding: 48px 24px;
+            color: var(--worn-brown); font-size: .88rem; position: relative; z-index: 1;
+        }
+        .footer-ornament {
+            font-size: 2rem; color: var(--gold-dark); letter-spacing: 12px;
+            display: block; margin-bottom: 14px; opacity: .7;
+        }
+        .source-note { margin-top: 10px; font-size: .78rem; opacity: .7; letter-spacing: .5px; }
+
+        /* RESPONSIVE */
+        @media (max-width: 650px) {
+            .card-body { padding: 22px 20px; }
+            .card-header { padding: 20px 22px; }
+            .stats-row, .info-text { padding-left: 0; }
+            .hero { padding: 50px 16px 36px; }
+            .ornament::before,.ornament::after { width: 12%; }
+        }
+
+        /* SCROLLBAR */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--parchment-dark); }
+        ::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+    </style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+    <div class="hero-bar">⚜&nbsp;&nbsp;বাংলার ঐতিহ্য&nbsp;&nbsp;⚜</div>
+    <h1 class="site-title">ঐতিজ্জ্বো<br><span>রাজকীয় কারুশিল্পের ইতিকথা</span></h1>
+    <p class="site-subtitle">যে শিল্পের শিকড় রাজপ্রাসাদ থেকে গ্রামের উঠোন পর্যন্ত বিস্তৃত</p>
+    <div class="royal-seal" role="img" aria-label="রাজকীয় সিল">🏺</div>
+</header>
+
+<!-- STICKY NAV -->
+<nav class="sticky-nav" aria-label="পণ্য নেভিগেশন">
+    <a class="nav-btn" href="#nakshi">নকশিকাঁথা</a>
+    <a class="nav-btn" href="#shital">শীতলপাটি</a>
+    <a class="nav-btn" href="#mritsho">মৃৎশিল্প</a>
+    <a class="nav-btn" href="#tant">তাঁত শিল্প</a>
+</nav>
+
+<main>
+
+<!-- ১. নকশিকাঁথা -->
+<section id="nakshi" class="product-card reveal">
+    <div class="ornament">✦ ✦ ✦</div>
+    <div class="card-inner">
+        <span class="card-corner tl">❧</span><span class="card-corner tr">❧</span>
+        <span class="card-corner bl">❧</span><span class="card-corner br">❧</span>
+        <div class="card-header">
+            <div class="card-icon" role="img" aria-label="নকশিকাঁথা">🪡</div>
+            <div>
+                <h2 class="card-title">নকশিকাঁথা</h2>
+                <p class="card-era">Nakshi Kantha · ৫০০+ বছরের ঐতিহ্য</p>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="info-section">
+                <div class="info-label">
+                    <span class="info-icon">📜</span>
+                    <h3 class="info-heading">ইতিহাস ও উৎপত্তি</h3>
+                </div>
+                <div class="timeline-badge">⏳ আনু. ১৫শ–১৬শ শতক থেকে প্রচলিত</div>
+                <p class="info-text">
+                    নকশিকাঁথার ইতিহাস ৫০০ বছরেরও বেশি পুরনো। বাংলা শব্দ <em>'নকশা'</em> (শৈল্পিক নকশা) থেকে এর নামকরণ। আর <em>'কাঁথা'</em> শব্দটি এসেছে সংস্কৃত <em>'কন্থা'</em> থেকে, যার অর্থ ছেঁড়া কাপড় — কারণ এটি মূলত পুরনো শাড়ি ও কাপড় জোড়া দিয়ে বানানো হতো।
+                    বাংলাদেশ ও পশ্চিমবঙ্গ, ত্রিপুরা এবং আসামের কিছু অঞ্চলে এই শিল্পের চর্চা রয়েছে। একসময় কেবল পরিবারের ব্যবহারের জন্য বানানো হলেও আধুনিক যুগে এটি একটি স্বীকৃত শিল্পকলায় পরিণত হয়েছে।
+                </p>
+            </div>
+            <div class="info-section">
+                <div class="info-label">
+                    <span class="info-icon">🧵</span>
+                    <h3 class="info-heading">কীভাবে বানানো হয়</h3>
+                </div>
+                <p class="info-text">
+                    মূল উপাদান — সুতো ও পুরনো সুতির কাপড়। কাপড়গুলোকে স্তরে স্তরে বিছিয়ে চারদিক থেকে সুতো দিয়ে আটকানো হয়। এরপর শুরু হয় মূল শিল্পকাজ — <em>'রানিং স্টিচ'</em> বা কাঁথা ফোঁড়ের মাধ্যমে রঙিন সুতোয় নিখুঁত নকশা আঁকা। প্রাচীনকালে সাদা পটভূমিতে লাল, নীল ও কালো সুতো ব্যবহার হতো; পরবর্তীকালে হলুদ, সবুজ ও গোলাপি রঙও যুক্ত হয়। লোহরি, সুজনি, লিক/আনারসি — এরকম বিভিন্ন ধরনের নকশা রয়েছে।
+                </p>
+            </div>
+            <div class="info-section">
+                <div class="info-label">
+                    <span class="info-icon">👩‍🎨</span>
+                    <h3 class="info-heading">কারিগরদের জীবিকা ও পরিশ্রম</h3>
+                </div>
+                <p class="info-text">
+                    বংশ পরম্পরায় বাংলার গ্রামীণ নারীরা এই শিল্পের প্রধান ধারক ও বাহক। ময়মনসিংহ, জামালপুর, বগুড়া, রাজশাহী, ফরিদপুর, যশোর এবং চট্টগ্রামে হাজার হাজার নারী এই পেশায় জড়িত। একটি উচ্চমানের নকশিকাঁথা সম্পন্ন করতে একজন কারিগরের <strong>কয়েক সপ্তাহ থেকে কয়েক মাস</strong> সময় ও অপরিসীম ধৈর্যের প্রয়োজন। এটি গ্রামীণ নারীদের অন্যতম প্রধান জীবিকার উৎস, যা দেশীয় ও আন্তর্জাতিক বাজারে রপ্তানি হচ্ছে।
+                </p>
+                <div class="stats-row">
+                    <div class="stat-chip"><span class="stat-value">৫০০+</span><span class="stat-label">বছরের ঐতিহ্য</span></div>
+                    <div class="stat-chip"><span class="stat-value">লক্ষাধিক</span><span class="stat-label">নারী কারিগর</span></div>
+                    <div class="stat-chip"><span class="stat-value">২–৬ মাস</span><span class="stat-label">একটি কাঁথার সময়</span></div>
+                </div>
+            </div>
+            <div class="quote-box">
+                <p class="quote-text">"প্রতিটি সুতোর বুননে মিশে থাকে গ্রামীণ নারীর স্বপ্ন, অগণিত নির্ঘুম রাত আর ভালোবাসার অপরিসীম ছাপ — একটি কাঁথা শুধু কাপড় নয়, একটি জীবনের আখ্যান।"</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ২. শীতলপাটি -->
+<section id="shital" class="product-card reveal">
+    <div class="ornament">✦ ✦ ✦</div>
+    <div class="card-inner">
+        <span class="card-corner tl">❧</span><span class="card-corner tr">❧</span>
+        <span class="card-corner bl">❧</span><span class="card-corner br">❧</span>
+        <div class="card-header">
+            <div class="card-icon" role="img" aria-label="শীতলপাটি">🌿</div>
+            <div>
+                <h2 class="card-title">শীতলপাটি</h2>
+                <p class="card-era">Shital Pati · UNESCO স্বীকৃত শিল্প (২০১৭)</p>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="info-section">
+                <div class="info-label">
+                    <span class="info-icon">📜</span>
+                    <h3 class="info-heading">ইতিহাস ও উৎপত্তি</h3>
+                </div>
+                <div class="timeline-badge">⏳ শতাব্দীপ্রাচীন — UNESCO স্বীকৃতি ২০১৭</div>
+                <p class="info-text">
+                    শীতলপাটি বাংলাদেশ ও পশ্চিমবঙ্গের এক প্রাচীন ঐতিহ্যবাহী হস্তশিল্প। এটি মূলত গ্রীষ্মকালীন তাপ থেকে মুক্তি পেতে জমিদার ও রাজ পরিবারে ব্যবহার হতো। সিলেট অঞ্চলের শীতলপাটি বুনন ২০১৭ সালে ইউনেস্কো কর্তৃক 'অধরা সাংস্কৃতিক ঐতিহ্য' (Intangible Cultural Heritage) হিসেবে আন্তর্জাতিক স্বীকৃতি পায়।
+                </p>
+            </div>
+            <div class="info-section">
+                <div class="info-label">
+                    <span class="info-icon">🌾</span>
+                    <h3 class="info-heading">কীভাবে বানানো হয়</h3>
+                </div>
+                <p class="info-text">
+                    শীতলপাটি তৈরি হয় <em>মুর্তা গাছ</em> (<em>Schumannianthus dichotomus</em>) থেকে। গ্রামাঞ্চলে এই গাছ পতিবেত, পাতিপাতা বা মোস্তাক নামেও পরিচিত। নিচু জলাভূমিতে জন্মানো এই গাছের ছাল ছাড়িয়ে সরু সরু বেতি তৈরি করা হয়। এরপর সেই বেতিগুলো সম্পূর্ণ হাতে বুনে তৈরি হয় এই পাটি। হাতে বানানো হওয়ায় প্রতিটি পাটি একটু আলাদা — এই অনন্যতাই এর আসলতার প্রমাণ। নকশাদার পাটিকে বলা হয় <em>'নকশিপাটি'</em>।
+                </p>
+            </div>
+            <div class="info-section">
+                <div class="info-label">
+                    <span class="info-icon">🏡</span>
+                    <h3 class="info-heading">কারিগরদের জীবিকা ও পরিশ্রম</h3>
+                </div>
+                <p class="info-text">
+                    প্রধানত জলাভূমি এলাকার গ্রামীণ পরিবারগুলো এই শিল্পের ধারক। সিলেট, সুনামগঞ্জ, বরিশাল, টাঙ্গাইল, নোয়াখালী ও ফেনীতে 'পাটিকর' পরিবারগুলো প্রজন্মের পর প্রজন্ম ধরে এই পেশায় রয়েছেন। একটি শীতলপাটি বুনতে পরিবারের কয়েকজন মিলে কয়েক সপ্তাহ নিরলস পরিশ্রম করতে হয়। প্রথমে মুর্তা কাটা, শুকানো, বেতি তৈরি — তারপর বোনা। এটি তাদের বংশানুক্রমিক পেশা ও প্রধান জীবিকা।
+                </p>
+                <div class="stats-row">
+                    <div class="stat-chip"><span class="stat-value">UNESCO</span><span class="stat-label">বিশ্ব ঐতিহ্য (২০১৭)</span></div>
+                    <div class="stat-chip"><span class="stat-value">হাজারো</span><span class="stat-label">পাটিকর পরিবার</span></div>
+                    <div class="stat-chip"><span class="stat-value">২–৪ সপ্তাহ</span><span class="stat-label">একটি পাটির সময়</span></div>
+                </div>
+            </div>
+            <div class="quote-box">
+                <p class="quote-text">"গরমের দুপুরে শীতলপাটিতে শুয়ে থাকার সেই অনুভূতি কোনো শীতাতপনিয়ন্ত্রণ যন্ত্র দিতে পারে না — এটি আমাদের মাটির স্পর্শ, আমাদের শেকড়ের টান।"</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ৩. মৃৎশিল্প -->
+<section id="mritsho" class="product-card reveal">
+    <div class="ornament">✦ ✦ ✦</div>
+    <div class="card-inner">
+        <span class="card-corner tl">❧</span><span class="card-corner tr">❧</span>
+        <span class="card-corner bl">❧</span><span class="card-corner br">❧</span>
+        <div class="card-header">
+            <div class="card-icon" role="img" aria-label="মৃৎশিল্প">🏺</div>
+            <div>
+                <h2 class="card-title">মৃৎশিল্প</h2>
+                <p class="card-era">Pottery · ২০০০+ বছরের প্রাচীন শিল্প</p>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="info-section">
+                <div class="info-label">
+                    <span class="info-icon">📜</span>
+                    <h3 class="info-heading">ইতিহাস ও উৎপত্তি</h3>
+                </div>
+                <div class="timeline-badge">⏳ আনু. ৩০০ খ্রিস্টপূর্বাব্দ থেকে প্রমাণিত</div>
+                <p class="info-text">
+                    বাংলার মৃৎশিল্পের ইতিহাস দুই হাজার বছরেরও বেশি প্রাচীন। <strong>মহাস্থানগড়</strong> (বগুড়া), <strong>উয়ারী-বটেশ্বর</strong> (নরসিংদী), <strong>পাহাড়পুর</strong> ও <strong>ময়নামতি</strong>-র প্রত্নতাত্ত্বিক খননে ৩০০ খ্রিস্টপূর্বাব্দের মাটির পাত্র ও টেরাকোটা আবিষ্কৃত হয়েছে। মুঘল যুগে ঢাকার <em>রায়েরবাজার</em> (ঐতিহাসিক কুমারটুলি) লালমাটির মৃৎশিল্পের কেন্দ্র হিসেবে রাজকীয় মর্যাদা পেয়েছিল। সুলতানি যুগে চীন ও পারসিক প্রভাবে নতুন নকশা ও গ্লেজ কৌশল সংযুক্ত হয়।
+                </p>
+            </div>
+            <div class="info-section">
+                <div class="info-label">
+                    <span class="info-icon">🔥</span>
+                    <h3 class="info-heading">কীভাবে বানানো হয়</h3>
+                </div>
+                <p class="info-text">
+                    মাটি (বিশেষ করে লালমাটি) সংগ্রহ করে পানিতে মিশিয়ে নমনীয় করা হয়। এরপর দ্রুত ঘূর্ণায়মান কুমোরের চাকায় (Potter's Wheel) দুই হাতের নিপুণ স্পর্শে আকার দেওয়া হয় পাত্রকে। কাঁচা পাত্র রোদে শুকিয়ে সাজানো হয় বিশাল চুল্লিতে (Kiln)। উচ্চ তাপমাত্রায় পোড়ানোর পর পাত্র হয়ে ওঠে শক্ত ও টেকসই — যা হাজার বছর টিকে থাকার প্রমাণ রাখে ইতিহাসের পাতায়।
+                </p>
+            </div>
+            <div class="info-section">
+                <div class="info-label">
+                    <span class="info-icon">🙏</span>
+                    <h3 class="info-heading">কারিগরদের জীবিকা ও পরিশ্রম</h3>
+                </div>
+                <p class="info-text">
+                    ঐতিহ্যগতভাবে <strong>কুমার</strong> বা <strong>পাল</strong> সম্প্রদায়ের মানুষেরা এই শিল্পের মূল ধারক। মাটি সংগ্রহ, মাড়ানো, চাকায় আকার দেওয়া, রোদে শুকানো, চুল্লিতে পোড়ানো — প্রতিটি ধাপে প্রয়োজন প্রচণ্ড কায়িক শ্রম। আধুনিক যুগে সস্তা প্লাস্টিক ও অ্যালুমিনিয়ামের কারণে তারা তীব্র আর্থিক সংকটে পড়েছেন। তবুও এই শিল্পের সাথে হাজারো পরিবারের জীবন জড়িয়ে আছে প্রজন্মের পর প্রজন্ম ধরে।
+                </p>
+                <div class="stats-row">
+                    <div class="stat-chip"><span class="stat-value">২০০০+</span><span class="stat-label">বছরের প্রাচীনতা</span></div>
+                    <div class="stat-chip"><span class="stat-value">কুমার/পাল</span><span class="stat-label">বংশানুক্রমিক কারিগর</span></div>
+                    <div class="stat-chip"><span class="stat-value">৩–৭ দিন</span><span class="stat-label">একটি পাত্রের সময়</span></div>
+                </div>
+            </div>
+            <div class="quote-box">
+                <p class="quote-text">"মাটির প্রতিটি পাত্র আসলে একটি দর্পণ — যেখানে দেখা যায় হাজার বছরের সভ্যতার মুখ, কুমোরের ঘামের গন্ধ আর পোড়া মাটির চিরন্তন স্পর্শ।"</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ৪. তাঁত শিল্প -->
+<section id="tant" class="product-card reveal">
+    <div class="ornament">✦ ✦ ✦</div>
+    <div class="card-inner">
+        <span class="card-corner tl">❧</span><span class="card-corner tr">❧</span>
+        <span class="card-corner bl">❧</span><span class="card-corner br">❧</span>
+        <div class="card-header">
+            <div class="card-icon" role="img" aria-label="তাঁত শিল্প">🧶</div>
+            <div>
+                <h2 class="card-title">তাঁত শিল্প</h2>
+                <p class="card-era">Tant Weaving · UNESCO স্বীকৃতি (২০২৫)</p>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="info-section">
+                <div class="info-label">
+                    <span class="info-icon">📜</span>
+                    <h3 class="info-heading">ইতিহাস ও উৎপত্তি</h3>
+                </div>
+                <div class="timeline-badge">⏳ ১৫শ শতক থেকে প্রচলিত · UNESCO স্বীকৃতি ২০২৫</div>
+                <p class="info-text">
+                    'তাঁত' শব্দটি এসেছে সংস্কৃত <em>'তন্তু'</em> (সুতো) থেকে। বঙ্গে তাঁত বুননের ইতিহাস কমপক্ষে ১৫শ শতক থেকে। মুঘল যুগে রাজকীয় পৃষ্ঠপোষকতায় ঢাকার বিশ্বখ্যাত মসলিন ও জামদানির পাশাপাশি সাধারণ মানুষের জন্য সুতির তাঁত কাপড়ের ব্যাপক প্রসার ঘটে। ব্রিটিশ আমলে সস্তা মেশিন-কাপড়ের চাপে শিল্পটি ক্ষতিগ্রস্ত হলেও টিকে থাকে। ১৯৪৭-এর দেশভাগে অনেক তাঁতি পশ্চিমবঙ্গে চলে গিয়ে ফুলিয়া-শান্তিপুরে ঐতিহ্য ছড়িয়ে দেন। <strong>টাঙ্গাইলের তাঁতের শাড়ি</strong> ২০২৫ সালে UNESCO স্বীকৃতি পেয়েছে।
+                </p>
+            </div>
+            <div class="info-section">
+                <div class="info-label">
+                    <span class="info-icon">⚙️</span>
+                    <h3 class="info-heading">কীভাবে বানানো হয়</h3>
+                </div>
+                <p class="info-text">
+                    সুতো রং করা ও শুকানোর পর চরকায় পেঁচিয়ে তাঁতে (Shuttle-pit Loom) সাজানো হয়। তারপর শুরু হয় তাঁতির দুই হাত ও দুই পায়ের অবিরাম ছন্দময় চলাচল — মাকু ছোড়া, পা দিয়ে পাড়ানি চাপানো, হাত দিয়ে বাড়ি মারা। এভাবে সুতো থেকে উঠে আসে হালকা, বায়বীয় কাপড়। পাড় ও আঁচলে <em>রাজমহল, ভোমরা, তাবিজ, নীলাম্বরী</em>র মতো ঐতিহ্যবাহী নকশা তোলা হয় — প্রতিটি মোটিফ একটি গল্প বলে।
+                </p>
+            </div>
+            <div class="info-section">
+                <div class="info-label">
+                    <span class="info-icon">🏘️</span>
+                    <h3 class="info-heading">কারিগরদের জীবিকা ও পরিশ্রম</h3>
+                </div>
+                <p class="info-text">
+                    টাঙ্গাইলের <strong>বসাক সম্প্রদায়</strong>সহ সারা দেশে লাখো তাঁতি এই শিল্পের সাথে যুক্ত। তারা মসলিন তাঁতিদেরই বংশধর। একটি নকশাদার শাড়ি বুনতে কয়েকদিন থেকে কয়েক সপ্তাহ লাগে। ভোর থেকে রাত পর্যন্ত তাঁতপল্লীতে মাকুর ছন্দময় শব্দ ভেসে বেড়ায়। এই শব্দের সাথে বাঁধা থাকে টাঙ্গাইল সদর, কালিহাতী, নাগরপুর ও বাসাইলের হাজারো পরিবারের জীবন।
+                </p>
+                <div class="stats-row">
+                    <div class="stat-chip"><span class="stat-value">৬০০+</span><span class="stat-label">বছরের ঐতিহ্য</span></div>
+                    <div class="stat-chip"><span class="stat-value">লক্ষাধিক</span><span class="stat-label">তাঁতি পরিবার</span></div>
+                    <div class="stat-chip"><span class="stat-value">৩–১৪ দিন</span><span class="stat-label">একটি শাড়ির সময়</span></div>
+                </div>
+            </div>
+            <div class="quote-box">
+                <p class="quote-text">"তাঁতের মাকুর শব্দ শুনলে মনে হয় — এ যেন সময়ের হৃদস্পন্দন। প্রতিটি কাপড়ে জড়িয়ে আছে প্রজন্মের ঘাম, রাজার দরবার থেকে গ্রামের উঠোনের গল্প।"</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="page-footer">
+    <span class="footer-ornament">⚜ ⚜ ⚜</span>
+    <p>বাংলার এই ঐতিহ্যবাহী শিল্পগুলো আমাদের শেকড়, আমাদের পরিচয়।</p>
+    <p>তাদের রক্ষা করা আমাদের দায়িত্ব।</p>
+    <p class="source-note">তথ্যসূত্র: Wikipedia, UNESCO Intangible Cultural Heritage, BCMEA</p>
+</footer>
+
+<script>
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+        });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
