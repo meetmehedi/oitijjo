@@ -130,7 +130,10 @@ function CartContent() {
                 { id: 'nagad', label: 'Nagad', color: '#F7A400' },
                 { id: 'cod', label: 'ক্যাশ অন ডেলিভারি', color: 'var(--terracotta)' },
               ].map(m => (
-                <button key={m.id}
+                <button 
+                  key={m.id}
+                  type="button"
+                  id={`payment-method-${m.id}`}
                   onClick={() => setPayMethod(m.id)}
                   style={{
                     flex: 1, padding: '12px 8px', borderRadius: 6,
@@ -145,21 +148,33 @@ function CartContent() {
               ))}
             </div>
 
-            {payMethod !== 'cod' && (
-              <div className="form-group">
-                <label className="form-label">{payMethod === 'bkash' ? 'bKash' : 'Nagad'} নম্বর</label>
-                <input className="form-input" placeholder="01XXXXXXXXX" value={phone} onChange={e => setPhone(e.target.value)} />
+            <form onSubmit={(e) => { e.preventDefault(); setStep('done'); }}>
+              {payMethod !== 'cod' && (
+                <div className="form-group">
+                  <label htmlFor="payment_phone_number" className="form-label">{payMethod === 'bkash' ? 'bKash' : 'Nagad'} নম্বর *</label>
+                  <input 
+                    required
+                    id="payment_phone_number"
+                    name="payment_phone_number"
+                    type="tel"
+                    autoComplete="tel"
+                    className="form-input" 
+                    placeholder="01XXXXXXXXX" 
+                    value={phone} 
+                    onChange={e => setPhone(e.target.value)} 
+                  />
+                </div>
+              )}
+
+              <div style={{ display: 'flex', justifyContent: 'space-between', padding: '16px 0', borderTop: '1px solid rgba(201,168,76,.2)', marginBottom: 20 }}>
+                <span style={{ fontWeight: 700 }}>মোট পরিশোধ</span>
+                <span style={{ fontWeight: 700, color: 'var(--terracotta)', fontSize: '1.15rem' }}>৳{(total + 80).toLocaleString()}</span>
               </div>
-            )}
 
-            <div style={{ display: 'flex', justifyContent: 'space-between', padding: '16px 0', borderTop: '1px solid rgba(201,168,76,.2)', marginBottom: 20 }}>
-              <span style={{ fontWeight: 700 }}>মোট পরিশোধ</span>
-              <span style={{ fontWeight: 700, color: 'var(--terracotta)', fontSize: '1.15rem' }}>৳{(total + 80).toLocaleString()}</span>
-            </div>
-
-            <button className="btn-primary" style={{ width: '100%', justifyContent: 'center', padding: 14 }} onClick={() => setStep('done')}>
-              ✓ নিশ্চিত করুন ও অর্ডার দিন
-            </button>
+              <button type="submit" className="btn-primary" style={{ width: '100%', justifyContent: 'center', padding: 14 }}>
+                ✓ নিশ্চিত করুন ও অর্ডার দিন
+              </button>
+            </form>
           </div>
         </div>
       )}

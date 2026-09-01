@@ -73,14 +73,14 @@ export default function BecomeArtisanPage() {
                   ব্যক্তিগত তথ্য
                 </h2>
                 <div className="form-group">
-                  <label className="form-label">পূর্ণ নাম *</label>
-                  <input className="form-input" placeholder="আপনার সম্পূর্ণ নাম লিখুন" value={form.name} onChange={e => update('name', e.target.value)} />
+                  <label htmlFor="artisan_name" className="form-label">পূর্ণ নাম *</label>
+                  <input id="artisan_name" name="artisan_name" autoComplete="name" className="form-input" placeholder="আপনার সম্পূর্ণ নাম লিখুন" value={form.name} onChange={e => update('name', e.target.value)} />
                 </div>
                 <div className="form-group">
-                  <label className="form-label">মোবাইল নম্বর *</label>
+                  <label htmlFor="artisan_phone" className="form-label">মোবাইল নম্বর *</label>
                   <div style={{ display: 'flex', gap: 10 }}>
-                    <input className="form-input" placeholder="01XXXXXXXXX" value={form.phone} onChange={e => update('phone', e.target.value)} style={{ flex: 1 }} />
-                    <button className="btn-primary" style={{ padding: '11px 18px', fontSize: '.82rem' }} onClick={sendOtp}>
+                    <input id="artisan_phone" name="artisan_phone" type="tel" autoComplete="tel" className="form-input" placeholder="01XXXXXXXXX" value={form.phone} onChange={e => update('phone', e.target.value)} style={{ flex: 1 }} />
+                    <button type="button" className="btn-primary" style={{ padding: '11px 18px', fontSize: '.82rem' }} onClick={sendOtp}>
                       OTP পাঠান
                     </button>
                   </div>
@@ -99,10 +99,11 @@ export default function BecomeArtisanPage() {
                   প্রতারণা ঠেকাতে NID যাচাই বাধ্যতামূলক। আপনার তথ্য সম্পূর্ণ নিরাপদ।
                 </p>
                 <div className="form-group">
-                  <label className="form-label">জাতীয় পরিচয়পত্র নম্বর (NID) *</label>
-                  <input className="form-input" placeholder="আপনার ১৭ সংখ্যার NID নম্বর" value={form.nid} onChange={e => update('nid', e.target.value)} />
+                  <label htmlFor="artisan_nid" className="form-label">জাতীয় পরিচয়পত্র নম্বর (NID) *</label>
+                  <input id="artisan_nid" name="artisan_nid" className="form-input" placeholder="আপনার ১৭ সংখ্যার NID নম্বর" value={form.nid} onChange={e => update('nid', e.target.value)} />
                 </div>
                 <div 
+                  id="nid_upload_box"
                   onClick={() => update('nidUploaded', true)}
                   style={{
                     background: form.nidUploaded ? 'rgba(0,160,60,0.08)' : 'rgba(201,168,76,.08)', 
@@ -126,12 +127,12 @@ export default function BecomeArtisanPage() {
                   {form.phone || '01XXXXXXXXX'} নম্বরে পাঠানো ৬ সংখ্যার কোড লিখুন।
                 </p>
                 <div className="form-group">
-                  <label className="form-label">OTP কোড *</label>
-                  <input className="form-input" placeholder="_ _ _ _ _ _" value={form.otp}
+                  <label htmlFor="artisan_otp" className="form-label">OTP কোড *</label>
+                  <input id="artisan_otp" name="artisan_otp" className="form-input" placeholder="_ _ _ _ _ _" value={form.otp}
                     onChange={e => update('otp', e.target.value)}
                     style={{ letterSpacing: 8, fontSize: '1.4rem', textAlign: 'center' }} maxLength={6} />
                 </div>
-                <button style={{ background: 'none', border: 'none', color: 'var(--gold-dark)', fontSize: '.82rem', cursor: 'pointer' }}>
+                <button type="button" style={{ background: 'none', border: 'none', color: 'var(--gold-dark)', fontSize: '.82rem', cursor: 'pointer' }}>
                   কোড পাননি? পুনরায় পাঠান
                 </button>
               </div>
@@ -144,8 +145,8 @@ export default function BecomeArtisanPage() {
                   শিল্পের তথ্য
                 </h2>
                 <div className="form-group">
-                  <label className="form-label">শিল্পের ধরন *</label>
-                  <select className="form-input" value={form.craft} onChange={e => update('craft', e.target.value)}>
+                  <label htmlFor="artisan_craft" className="form-label">শিল্পের ধরন *</label>
+                  <select id="artisan_craft" name="artisan_craft" className="form-input" value={form.craft} onChange={e => update('craft', e.target.value)}>
                     <option value="">বেছে নিন…</option>
                     <option value="nakshi">নকশিকাঁথা</option>
                     <option value="tant">তাঁত শিল্প</option>
@@ -155,16 +156,16 @@ export default function BecomeArtisanPage() {
                   </select>
                 </div>
                 <div className="form-group">
-                  <label className="form-label">অঞ্চল *</label>
-                  <input className="form-input" placeholder="আপনার জেলা/উপজেলা" value={form.region} onChange={e => update('region', e.target.value)} />
+                  <label htmlFor="artisan_region" className="form-label">অঞ্চল *</label>
+                  <input id="artisan_region" name="artisan_region" className="form-input" placeholder="আপনার জেলা/উপজেলা" value={form.region} onChange={e => update('region', e.target.value)} />
                 </div>
                 <div className="form-group">
-                  <label className="form-label">অভিজ্ঞতা (বছরে) *</label>
-                  <input type="number" className="form-input" placeholder="যেমন: ১৫" value={form.experience} onChange={e => update('experience', e.target.value)} />
+                  <label htmlFor="artisan_exp" className="form-label">অভিজ্ঞতা (বছরে) *</label>
+                  <input id="artisan_exp" name="artisan_exp" type="number" className="form-input" placeholder="যেমন: ১৫" value={form.experience} onChange={e => update('experience', e.target.value)} />
                 </div>
                 <div className="form-group">
-                  <label className="form-label">আপনার গল্প (বাংলায় লিখুন)</label>
-                  <textarea className="form-input" rows={4} placeholder="আপনার শিল্পের সাথে পরিচয়, পরিবারের ইতিহাস, কেন এই কাজ করেন…"
+                  <label htmlFor="artisan_story" className="form-label">আপনার গল্প (বাংলায় লিখুন)</label>
+                  <textarea id="artisan_story" name="artisan_story" className="form-input" rows={4} placeholder="আপনার শিল্পের সাথে পরিচয়, পরিবারের ইতিহাস, কেন এই কাজ করেন…"
                     value={form.story} onChange={e => update('story', e.target.value)} style={{ resize: 'vertical' }} />
                 </div>
               </div>

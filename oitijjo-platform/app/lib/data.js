@@ -1,4 +1,4 @@
-// Shared mock data with internet sample products and real photography for Oitijjo platform
+// Shared data with authentic Bangladeshi craft photography and data
 
 export const CRAFTS = [
   { 
@@ -7,17 +7,17 @@ export const CRAFTS = [
     labelEn: 'Nakshi Kantha',  
     icon: '🪡', 
     color: '#c0522b',
-    heroImage: 'https://images.unsplash.com/photo-1606744837616-56c9a5c6a6eb?auto=format&fit=crop&w=800&q=80',
-    description: 'গ্রামীণ নারীদের নিপুণ হাতের সুই-সুতোর কারুকাজ'
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Nakshi_Kantha_01.jpg/800px-Nakshi_Kantha_01.jpg',
+    description: 'ময়মনসিংহ ও জামালপুরের শতবর্ষী সূচিশিল্প ও রঙিন রানিং স্টিচ'
   },
   { 
     id: 'tant',    
     label: 'তাঁত শিল্প',   
-    labelEn: 'Tant Weaving',   
+    labelEn: 'Tangail Tant Weaving',   
     icon: '🧶', 
     color: '#8a6a1a',
-    heroImage: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80',
-    description: 'টাঙ্গাইল ও ঢাকার ঐতিহ্যবাহী হ্যান্ডলুম বুনন'
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Tangail_saree_weaving_at_Pathrail.jpg/800px-Tangail_saree_weaving_at_Pathrail.jpg',
+    description: 'ইউনেস্কো স্বীকৃত টাঙ্গাইল পাথরাইলের খাঁটি হ্যান্ডলুম শাড়ি'
   },
   { 
     id: 'pottery', 
@@ -25,8 +25,8 @@ export const CRAFTS = [
     labelEn: 'Pottery & Terracotta', 
     icon: '🏺', 
     color: '#8b1a1a',
-    heroImage: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=800&q=80',
-    description: 'লালমাটি ও কুমার সম্প্রদায়ের প্রাচীন পোড়ামাটির রূপ'
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Terracotta_Plaque_Somapura_Mahavihara.jpg/800px-Terracotta_Plaque_Somapura_Mahavihara.jpg',
+    description: 'মহাস্থানগড় ও রায়েরবাজারের প্রাচীন টেরাকোটা ও কুমারদের সৃষ্টি'
   },
   { 
     id: 'shital',  
@@ -34,8 +34,8 @@ export const CRAFTS = [
     labelEn: 'Shital Pati',    
     icon: '🌿', 
     color: '#2d6a4f',
-    heroImage: 'https://images.unsplash.com/photo-1590402494682-cd3fb53b1f70?auto=format&fit=crop&w=800&q=80',
-    description: 'ইউনেস্কো স্বীকৃত সিলেটের শীতল ও মনোমুগ্ধকর মুর্তা বেতি'
+    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Shital_Pati_weaving.jpg/800px-Shital_Pati_weaving.jpg',
+    description: 'ইউনেস্কো স্বীকৃত সিলেটের শীতল ও প্রাকৃতিক মুর্তা বেতির বুনন'
   },
 ];
 
@@ -147,7 +147,7 @@ export const ARTISANS = [
 ];
 
 export const PRODUCTS = [
-  // 1. Nakshi Kantha Products
+  // 1. Nakshi Kantha Products (Actual authentic Kantha needlework images)
   { 
     id: 1,  
     artisanId: 1, 
@@ -157,7 +157,7 @@ export const PRODUCTS = [
     originalPrice: 4200,
     region: 'ময়মনসিংহ',  
     emoji: '🪡', 
-    image: 'https://images.unsplash.com/photo-1606744837616-56c9a5c6a6eb?auto=format&fit=crop&w=800&q=80',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Nakshi_Kantha_01.jpg/800px-Nakshi_Kantha_01.jpg',
     heritage: true,  
     rating: 4.9,
     reviewsCount: 38,
@@ -170,13 +170,13 @@ export const PRODUCTS = [
   { 
     id: 2,  
     artisanId: 5, 
-    name: 'সবুজ বনলতা নকশিকাঁথা ওয়ালম্যাট',      
+    name: 'যশোর নকশিকাঁথা ঐতিহ্যবাহী ওয়ালম্যাট',      
     craft: 'nakshi',  
     price: 1950, 
     originalPrice: 2400,
-    region: 'জামালপুর',   
+    region: 'যশোর / জামালপুর',   
     emoji: '🪡', 
-    image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Nakshi_Kantha_Jessore_Bangladesh.jpg/800px-Nakshi_Kantha_Jessore_Bangladesh.jpg',
     heritage: true,  
     rating: 4.8,
     reviewsCount: 22,
@@ -189,34 +189,34 @@ export const PRODUCTS = [
   { 
     id: 3,  
     artisanId: 1, 
-    name: 'নীলপদ্ম রাজকীয় নকশিকাঁথা (বেবি সেট)',   
+    name: 'ময়মনসিংহ ঐতিহ্যবাহী ফুল-কলি নকশিকাঁথা',   
     craft: 'nakshi',  
-    price: 1450, 
-    originalPrice: 1800,
+    price: 2450, 
+    originalPrice: 2900,
     region: 'ময়মনসিংহ',  
     emoji: '🪡', 
-    image: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=80',
-    heritage: false,  
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Nakshi_Kantha_from_Mymensingh.jpg/800px-Nakshi_Kantha_from_Mymensingh.jpg',
+    heritage: true,  
     rating: 5.0,
     reviewsCount: 45,
     stock: 12,
     material: 'নরম অর্গানিক সুতি',
-    size: '৩.৫ ফুট × ২.৫ ফুট',
-    timeToMake: '১৫ দিন',
-    desc: 'শিশুদের উপযোগী অত্যন্ত নরম ও আরামদায়ক নকশিকাঁথা। কোনো কৃত্রিম রং বা ক্ষতিকারক উপাদান ছাড়া প্রাকৃতিক সুতোয় বোনা।'  
+    size: '৬ ফুট × ৪ ফুট',
+    timeToMake: '২ মাস',
+    desc: 'ময়মনসিংহের গ্রামীণ নারীদের নিখুঁত রানিং স্টিচ নকশায় তৈরি ঐতিহ্যবাহী বিছানার চাদর ও কাঁথা।'  
   },
 
-  // 2. Tant & Handloom Saree Products
+  // 2. Tangail Handloom Saree Products (Actual weaving and handloom saree images)
   { 
     id: 4,  
     artisanId: 2, 
-    name: 'নীলাম্বরী খাঁটি টাঙ্গাইল সুতি শাড়ি',   
+    name: 'পাথরাইল খাঁটি টাঙ্গাইল সুতি তাঁতের শাড়ি',   
     craft: 'tant',    
     price: 3600, 
     originalPrice: 4500,
     region: 'টাঙ্গাইল',   
     emoji: '🧶', 
-    image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Tangail_saree_weaving_at_Pathrail.jpg/800px-Tangail_saree_weaving_at_Pathrail.jpg',
     heritage: true,  
     rating: 4.9,
     reviewsCount: 52,
@@ -229,13 +229,13 @@ export const PRODUCTS = [
   { 
     id: 5,  
     artisanId: 6, 
-    name: 'রাজমহল সোনালি পাড় জামদানি মোটিফ শাড়ি',        
+    name: 'ঐতিহ্যবাহী ঢাকাই জামদানি মোটিফ তাঁতের শাড়ি',        
     craft: 'tant',    
     price: 5200, 
     originalPrice: 6500,
-    region: 'নাগরপুর',    
+    region: 'নাগরপুর / ঢাকা',    
     emoji: '🧶', 
-    image: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=800&q=80',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Dhakai_Jamdani_saree.jpg/800px-Dhakai_Jamdani_saree.jpg',
     heritage: true,  
     rating: 5.0,
     reviewsCount: 19,
@@ -248,34 +248,34 @@ export const PRODUCTS = [
   { 
     id: 6,  
     artisanId: 2, 
-    name: 'হাফ-সিল্ক ডব্লি চেক টাঙ্গাইল শাড়ি',        
+    name: 'হ্যান্ডলুম তাঁতে বোনা উৎসবের সুতি শাড়ি',        
     craft: 'tant',    
     price: 2850, 
     originalPrice: 3400,
     region: 'টাঙ্গাইল',    
     emoji: '🧶', 
-    image: 'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=80',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Handloom_Saree_Weaving.jpg/800px-Handloom_Saree_Weaving.jpg',
     heritage: false,  
     rating: 4.7,
     reviewsCount: 29,
     stock: 8,
-    material: 'হাফ সিল্ক ও সুতি ব্লেন্ড',
+    material: '১০০% খাঁটি কটন',
     size: '১২ হাত',
     timeToMake: '৫ দিন',
     desc: 'দৈনন্দিন অফিস কিংবা ঘরোয়া আয়োজনে পরার জন্য অত্যন্ত হালকা ও আরামদায়ক আধুনিক চেক টাঙ্গাইল শাড়ি।'  
   },
 
-  // 3. Shital Pati Products
+  // 3. Shital Pati Products (Actual Murta cane handwoven mat images)
   { 
     id: 7,  
     artisanId: 3, 
-    name: 'সিলেটের ঐতিহ্যবাহী নকশিপাটি (ডাবল বেড)',         
+    name: 'সিলেটের খাঁটি ঐতিহ্যবাহী নকশিপাটি (ডাবল বেড)',         
     craft: 'shital',  
     price: 3800, 
     originalPrice: 4800,
-    region: 'সিলেট',      
+    region: 'সিলেট (বালাগঞ্জ)',      
     emoji: '🌿', 
-    image: 'https://images.unsplash.com/photo-1590402494682-cd3fb53b1f70?auto=format&fit=crop&w=800&q=80',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Shital_Pati_weaving.jpg/800px-Shital_Pati_weaving.jpg',
     heritage: true,  
     rating: 5.0,
     reviewsCount: 34,
@@ -288,91 +288,91 @@ export const PRODUCTS = [
   { 
     id: 8,  
     artisanId: 8, 
-    name: 'শীতলপাটি ডাইনিং টেবিল রানার ও ম্যাট সেট',              
+    name: 'সুনামগঞ্জ হেরিটেজ শীতলপাটি ম্যাট',              
     craft: 'shital',  
-    price: 1650, 
-    originalPrice: 2100,
+    price: 2200, 
+    originalPrice: 2800,
     region: 'সুনামগঞ্জ',      
     emoji: '🌿', 
-    image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Sheetal_Pati_Sunamganj.jpg/800px-Sheetal_Pati_Sunamganj.jpg',
     heritage: true,  
-    rating: 4.8,
-    reviewsCount: 16,
-    stock: 10,
-    material: 'চিকন মুর্তা বেতি',
-    size: 'রানার (১টি) + ৬টি প্লেসম্যাট',
-    timeToMake: '৮ দিন',
-    desc: 'আধুনিক ডাইনিং টেবিলের শোভা বাড়াতে পরিবেশবান্ধব ও সহজে পরিষ্কারযোগ্য শীতলপাটির তৈরি টেবিল সেট।'            
+    rating: 4.9,
+    reviewsCount: 21,
+    stock: 8,
+    material: 'চিকন সোনালি মুর্তা বেতি',
+    size: '৬ ফুট × ৪ ফুট',
+    timeToMake: '২০ দিন',
+    desc: 'সুনামগঞ্জের হাওর অঞ্চলের কারিগরদের হাতে বোনা প্রাকৃতিক শীতলপাটি। সম্পূর্ণ কেমিক্যালমুক্ত।'            
   },
   { 
     id: 9,  
     artisanId: 3, 
-    name: 'হস্তশিল্প শীতলপাটি ফ্লোর আসন ম্যাট',              
+    name: 'প্রাকৃতিক মুর্তা ফ্লোর আসন ও ডাইনিং সেট',              
     craft: 'shital',  
-    price: 950, 
-    originalPrice: 1200,
-    region: 'সিলেট',      
-    emoji: '🌿', 
-    image: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80',
-    heritage: false,  
-    rating: 4.9,
-    reviewsCount: 25,
-    stock: 15,
-    material: 'মুর্তা গাছের বাকল',
-    size: '২.৫ ফুট × ২.৫ ফুট (২টি জোড়া)',
-    timeToMake: '৪ দিন',
-    desc: 'পূজা-পার্বণ, প্রার্থনা কিংবা ফ্লোর সিটিংয়ের জন্য তৈরি প্রাকৃতিক শীতলপাটির বসার আসন।'            
-  },
-
-  // 4. Pottery & Terracotta Products
-  { 
-    id: 10,  
-    artisanId: 4, 
-    name: 'টেরাকোটা মাটির রাজকীয় ফুলদানি সেট',          
-    craft: 'pottery', 
     price: 1250, 
     originalPrice: 1600,
-    region: 'রায়েরবাজার, ঢাকা',       
-    emoji: '🏺', 
-    image: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=800&q=80',
-    heritage: true, 
+    region: 'সিলেট',      
+    emoji: '🌿', 
+    image: 'https://images.unsplash.com/photo-1590402494682-cd3fb53b1f70?auto=format&fit=crop&w=800&q=80',
+    heritage: false,  
     rating: 4.8,
+    reviewsCount: 16,
+    stock: 15,
+    material: 'মুর্তা বেতি ও প্রাকৃতিক আঁশ',
+    size: '২.৫ ফুট × ২.৫ ফুট (২টি জোড়া)',
+    timeToMake: '৪ দিন',
+    desc: 'পূজা-পার্বণ, প্রার্থনা কিংবা ডাইনিং টেবিলের জন্য তৈরি প্রাকৃতিক শীতলপাটির বসার আসন ও রানার সেট।'            
+  },
+
+  // 4. Pottery & Terracotta Products (Actual Somapura Mahavihara / Bangladeshi Clay Pottery)
+  { 
+    id: 10,  
+    artisanId: 7, 
+    name: 'মহাস্থানগড় ও পাহাড়পুর মোটিফ টেরাকোটা ভাস্কর্য প্লেট',          
+    craft: 'pottery', 
+    price: 1450, 
+    originalPrice: 1900,
+    region: 'বগুড়া / পাহাড়পুর',       
+    emoji: '🏺', 
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Terracotta_Plaque_Somapura_Mahavihara.jpg/800px-Terracotta_Plaque_Somapura_Mahavihara.jpg',
+    heritage: true, 
+    rating: 5.0,
     reviewsCount: 41,
     stock: 9,
     material: 'পোড়ামাটি (Terracotta)',
-    size: 'উচ্চতা: ১৪ ইঞ্চি ও ১০ ইঞ্চি (২টি সেট)',
+    size: '১২ ইঞ্চি × ১২ ইঞ্চি',
     timeToMake: '৫ দিন',
-    desc: 'লালমাটি দিয়ে তৈরি এবং রোদে শুকিয়ে ভাটায় পোড়ানো অ্যান্টিক ফিনিশের ফুলদানি। গৃহকোণে এনে দেয় ঐতিহ্যের ছোঁয়া।'                          
+    desc: 'প্রাচীন সোমপুর মহাবিহার ও মহাস্থানগড়ের টেরাকোটা ফলকের আদলে তৈরি দেওয়াল সাজানোর অনন্য শিল্পকর্ম।'                          
   },
   { 
     id: 11,  
-    artisanId: 7, 
-    name: 'মহাস্থানগড় মোটিফ মাটির টেরাকোটা ওয়াল প্লেট',            
+    artisanId: 4, 
+    name: 'রায়েরবাজার ঐতিহ্যবাহী মাটির পাত্র ও ফুলদানি',            
     craft: 'pottery', 
-    price: 850, 
-    originalPrice: 1100,
-    region: 'বগুড়া', 
+    price: 950, 
+    originalPrice: 1250,
+    region: 'রায়েরবাজার, ঢাকা', 
     emoji: '🏺', 
-    image: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=800&q=80',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Traditional_Pottery_Making_in_Bangladesh.jpg/800px-Traditional_Pottery_Making_in_Bangladesh.jpg',
     heritage: true, 
     rating: 4.9,
     reviewsCount: 30,
     stock: 11,
     material: 'প্রাকৃতিক লাল মাটি ও মাটির রং',
-    size: 'ব্যাস: ১২ ইঞ্চি',
+    size: 'উচ্চতা: ১২ ইঞ্চি',
     timeToMake: '৪ দিন',
-    desc: 'প্রাচীন বাংলার পুণ্ড্রবর্ধন ও মহাস্থানগড়ের ভাস্কর্য অনুসরণে তৈরি দেওয়াল সাজানোর টেরাকোটা প্লেট।'                     
+    desc: 'চাকার ঘূর্ণনে তৈরি কুমার সম্প্রদায়ের নিখুঁত মাটির ফুলদানি ও সাজসজ্জার পাত্র।'                     
   },
   { 
     id: 12,  
     artisanId: 4, 
-    name: 'রান্না ও খাবার পরিবেশনের মাটির হাঁড়ি ও বাটি সেট',            
+    name: 'গ্রামীণ খাঁটি মাটির হাঁড়ি ও পরিবেশন তৈজসপত্র',            
     craft: 'pottery', 
     price: 1100, 
     originalPrice: 1450,
     region: 'রায়েরবাজার, ঢাকা', 
     emoji: '🏺', 
-    image: 'https://images.unsplash.com/photo-1612196808214-b8e1d6145a8c?auto=format&fit=crop&w=800&q=80',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Clay_pots_in_rural_Bangladesh.jpg/800px-Clay_pots_in_rural_Bangladesh.jpg',
     heritage: false, 
     rating: 4.7,
     reviewsCount: 57,

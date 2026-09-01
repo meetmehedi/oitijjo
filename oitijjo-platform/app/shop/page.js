@@ -50,7 +50,10 @@ export default function ShopPage() {
               {/* Search Box */}
               <div style={{ position: 'relative', minWidth: '280px', flex: '1 1 300px' }}>
                 <input 
-                  type="text"
+                  id="product_search_input"
+                  name="product_search"
+                  type="search"
+                  aria-label="পণ্য সার্চ করুন"
                   placeholder="পণ্য, অঞ্চল বা মোটিফ দিয়ে খুঁজুন..." 
                   className="form-input"
                   value={searchQuery}
@@ -64,6 +67,9 @@ export default function ShopPage() {
 
               {/* Sort Selector */}
               <select
+                id="product_sort_selector"
+                name="product_sort"
+                aria-label="পণ্য সাজানোর ক্রম"
                 className="form-input"
                 style={{ width: 'auto', padding: '10px 18px', borderRadius: '25px' }}
                 value={sort}
