@@ -28,6 +28,7 @@ export default function Footer() {
               <li><Link href="/heritage">ঐতিহ্য</Link></li>
               <li><Link href="/become-artisan">কারিগর হিসেবে যোগ দিন</Link></li>
               <li><Link href="/about">আমাদের সম্পর্কে</Link></li>
+              <li><Link href="/admin" style={{ color: 'var(--gold-light)', fontWeight: 600 }}>🛡️ অ্যাডমিন প্যানেল</Link></li>
             </ul>
           </div>
           <div className="footer-col" suppressHydrationWarning>
