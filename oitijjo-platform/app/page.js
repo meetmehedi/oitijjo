@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ProductImage from './components/ProductImage';
 import { CRAFTS, ARTISANS, PRODUCTS } from './lib/data';
 
 export default function HomePage() {
@@ -152,17 +153,7 @@ export default function HomePage() {
                       height: 220, position: 'relative', overflow: 'hidden',
                       background: `linear-gradient(135deg, var(--parchment) 0%, var(--parchment-dark) 100%)`,
                     }}>
-                      {p.image ? (
-                        <img 
-                          src={p.image} 
-                          alt={p.name}
-                          style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
-                        />
-                      ) : (
-                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', fontSize: '4.5rem' }}>
-                          {p.emoji}
-                        </div>
-                      )}
+                      <ProductImage src={p.image} alt={p.name} emoji={p.emoji} />
                       
                       {p.heritage && (
                         <span className="badge" style={{ position: 'absolute', top: 12, left: 12, boxShadow: '0 2px 8px rgba(0,0,0,0.3)' }}>

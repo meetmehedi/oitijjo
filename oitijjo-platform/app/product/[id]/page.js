@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import ProductImage from '../../components/ProductImage';
 import { PRODUCTS, ARTISANS, CRAFTS } from '../../lib/data';
 
 export async function generateStaticParams() {
@@ -38,17 +39,12 @@ export default async function ProductPage({ params }) {
                 height: 440, position: 'relative', overflow: 'hidden',
                 background: 'linear-gradient(135deg, var(--parchment) 0%, var(--parchment-dark) 100%)',
               }}>
-                {product.image ? (
-                  <img 
-                    src={product.image} 
-                    alt={product.name}
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
-                  />
-                ) : (
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', fontSize: '10rem' }}>
-                    {product.emoji}
-                  </div>
-                )}
+                <ProductImage 
+                  src={product.image} 
+                  alt={product.name} 
+                  emoji={product.emoji} 
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                />
                 
                 {product.heritage && (
                   <span className="badge" style={{ position: 'absolute', top: 18, left: 18, fontSize: '.85rem', padding: '6px 14px' }}>
@@ -206,13 +202,7 @@ export default async function ProductPage({ params }) {
                         height: 180, position: 'relative', overflow: 'hidden',
                         background: 'linear-gradient(135deg, var(--parchment), var(--parchment-dark))' 
                       }}>
-                        {r.image ? (
-                          <img src={r.image} alt={r.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                        ) : (
-                          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', fontSize: '4rem' }}>
-                            {r.emoji}
-                          </div>
-                        )}
+                        <ProductImage src={r.image} alt={r.name} emoji={r.emoji} />
                       </div>
                       <div className="product-card-body" style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
                         <h3 className="product-card-name" style={{ fontSize: '1rem', minHeight: '2.5em' }}>{r.name}</h3>

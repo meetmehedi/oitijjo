@@ -4,6 +4,7 @@ import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import ProductImage from '../components/ProductImage';
 import { PRODUCTS, ARTISANS } from '../lib/data';
 
 function CartContent() {
@@ -62,13 +63,7 @@ function CartContent() {
                 return (
                   <div key={item.id} className="card" style={{ display: 'flex', gap: 18, padding: '18px 20px', marginBottom: 16, alignItems: 'center' }}>
                     <div style={{ width: 72, height: 72, overflow: 'hidden', background: 'var(--parchment)', borderRadius: 6, flexShrink: 0, position: 'relative' }}>
-                      {item.image ? (
-                        <img src={item.image} alt={item.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                      ) : (
-                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', fontSize: '2.5rem' }}>
-                          {item.emoji}
-                        </div>
-                      )}
+                      <ProductImage src={item.image} alt={item.name} emoji={item.emoji} />
                     </div>
                     <div style={{ flex: 1 }}>
                       <p style={{ fontWeight: 700, color: 'var(--ink)', marginBottom: 2 }}>{item.name}</p>

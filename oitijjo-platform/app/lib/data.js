@@ -1,4 +1,4 @@
-// Shared data with authentic Bangladeshi craft photography and data
+// Shared mock data with high-res responsive photography for Oitijjo platform
 
 export const CRAFTS = [
   { 
@@ -7,8 +7,8 @@ export const CRAFTS = [
     labelEn: 'Nakshi Kantha',  
     icon: '🪡', 
     color: '#c0522b',
-    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Nakshi_Kantha_01.jpg/800px-Nakshi_Kantha_01.jpg',
-    description: 'ময়মনসিংহ ও জামালপুরের শতবর্ষী সূচিশিল্প ও রঙিন রানিং স্টিচ'
+    heroImage: 'https://images.unsplash.com/photo-1606744837616-56c9a5c6a6eb?auto=format&fit=crop&w=800&q=80',
+    description: 'গ্রামীণ নারীদের নিপুণ হাতের সুই-সুতোর কারুকাজ'
   },
   { 
     id: 'tant',    
@@ -16,8 +16,8 @@ export const CRAFTS = [
     labelEn: 'Tangail Tant Weaving',   
     icon: '🧶', 
     color: '#8a6a1a',
-    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Tangail_saree_weaving_at_Pathrail.jpg/800px-Tangail_saree_weaving_at_Pathrail.jpg',
-    description: 'ইউনেস্কো স্বীকৃত টাঙ্গাইল পাথরাইলের খাঁটি হ্যান্ডলুম শাড়ি'
+    heroImage: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80',
+    description: 'টাঙ্গাইল ও পাথরাইলের ঐতিহ্যবাহী হ্যান্ডলুম বুনন'
   },
   { 
     id: 'pottery', 
@@ -25,8 +25,8 @@ export const CRAFTS = [
     labelEn: 'Pottery & Terracotta', 
     icon: '🏺', 
     color: '#8b1a1a',
-    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Terracotta_Plaque_Somapura_Mahavihara.jpg/800px-Terracotta_Plaque_Somapura_Mahavihara.jpg',
-    description: 'মহাস্থানগড় ও রায়েরবাজারের প্রাচীন টেরাকোটা ও কুমারদের সৃষ্টি'
+    heroImage: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=800&q=80',
+    description: 'লালমাটি ও কুমার সম্প্রদায়ের প্রাচীন পোড়ামাটির রূপ'
   },
   { 
     id: 'shital',  
@@ -34,8 +34,8 @@ export const CRAFTS = [
     labelEn: 'Shital Pati',    
     icon: '🌿', 
     color: '#2d6a4f',
-    heroImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Shital_Pati_weaving.jpg/800px-Shital_Pati_weaving.jpg',
-    description: 'ইউনেস্কো স্বীকৃত সিলেটের শীতল ও প্রাকৃতিক মুর্তা বেতির বুনন'
+    heroImage: 'https://images.unsplash.com/photo-1590402494682-cd3fb53b1f70?auto=format&fit=crop&w=800&q=80',
+    description: 'ইউনেস্কো স্বীকৃত সিলেটের শীতল ও মনোমুগ্ধকর মুর্তা বেতি'
   },
 ];
 
@@ -147,7 +147,7 @@ export const ARTISANS = [
 ];
 
 export const PRODUCTS = [
-  // 1. Nakshi Kantha Products (Actual authentic Kantha needlework images)
+  // 1. Nakshi Kantha Products
   { 
     id: 1,  
     artisanId: 1, 
@@ -157,7 +157,7 @@ export const PRODUCTS = [
     originalPrice: 4200,
     region: 'ময়মনসিংহ',  
     emoji: '🪡', 
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Nakshi_Kantha_01.jpg/800px-Nakshi_Kantha_01.jpg',
+    image: 'https://images.unsplash.com/photo-1606744837616-56c9a5c6a6eb?auto=format&fit=crop&w=800&q=80',
     heritage: true,  
     rating: 4.9,
     reviewsCount: 38,
@@ -170,13 +170,13 @@ export const PRODUCTS = [
   { 
     id: 2,  
     artisanId: 5, 
-    name: 'যশোর নকশিকাঁথা ঐতিহ্যবাহী ওয়ালম্যাট',      
+    name: 'যশোর ঐতিহ্যবাহী নকশিকাঁথা ওয়ালম্যাট',      
     craft: 'nakshi',  
     price: 1950, 
     originalPrice: 2400,
     region: 'যশোর / জামালপুর',   
     emoji: '🪡', 
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Nakshi_Kantha_Jessore_Bangladesh.jpg/800px-Nakshi_Kantha_Jessore_Bangladesh.jpg',
+    image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80',
     heritage: true,  
     rating: 4.8,
     reviewsCount: 22,
@@ -195,7 +195,7 @@ export const PRODUCTS = [
     originalPrice: 2900,
     region: 'ময়মনসিংহ',  
     emoji: '🪡', 
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Nakshi_Kantha_from_Mymensingh.jpg/800px-Nakshi_Kantha_from_Mymensingh.jpg',
+    image: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=80',
     heritage: true,  
     rating: 5.0,
     reviewsCount: 45,
@@ -206,7 +206,7 @@ export const PRODUCTS = [
     desc: 'ময়মনসিংহের গ্রামীণ নারীদের নিখুঁত রানিং স্টিচ নকশায় তৈরি ঐতিহ্যবাহী বিছানার চাদর ও কাঁথা।'  
   },
 
-  // 2. Tangail Handloom Saree Products (Actual weaving and handloom saree images)
+  // 2. Tangail Handloom Saree Products
   { 
     id: 4,  
     artisanId: 2, 
@@ -216,7 +216,7 @@ export const PRODUCTS = [
     originalPrice: 4500,
     region: 'টাঙ্গাইল',   
     emoji: '🧶', 
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Tangail_saree_weaving_at_Pathrail.jpg/800px-Tangail_saree_weaving_at_Pathrail.jpg',
+    image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80',
     heritage: true,  
     rating: 4.9,
     reviewsCount: 52,
@@ -235,7 +235,7 @@ export const PRODUCTS = [
     originalPrice: 6500,
     region: 'নাগরপুর / ঢাকা',    
     emoji: '🧶', 
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Dhakai_Jamdani_saree.jpg/800px-Dhakai_Jamdani_saree.jpg',
+    image: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=800&q=80',
     heritage: true,  
     rating: 5.0,
     reviewsCount: 19,
@@ -254,7 +254,7 @@ export const PRODUCTS = [
     originalPrice: 3400,
     region: 'টাঙ্গাইল',    
     emoji: '🧶', 
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Handloom_Saree_Weaving.jpg/800px-Handloom_Saree_Weaving.jpg',
+    image: 'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=80',
     heritage: false,  
     rating: 4.7,
     reviewsCount: 29,
@@ -265,7 +265,7 @@ export const PRODUCTS = [
     desc: 'দৈনন্দিন অফিস কিংবা ঘরোয়া আয়োজনে পরার জন্য অত্যন্ত হালকা ও আরামদায়ক আধুনিক চেক টাঙ্গাইল শাড়ি।'  
   },
 
-  // 3. Shital Pati Products (Actual Murta cane handwoven mat images)
+  // 3. Shital Pati Products
   { 
     id: 7,  
     artisanId: 3, 
@@ -275,7 +275,7 @@ export const PRODUCTS = [
     originalPrice: 4800,
     region: 'সিলেট (বালাগঞ্জ)',      
     emoji: '🌿', 
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Shital_Pati_weaving.jpg/800px-Shital_Pati_weaving.jpg',
+    image: 'https://images.unsplash.com/photo-1590402494682-cd3fb53b1f70?auto=format&fit=crop&w=800&q=80',
     heritage: true,  
     rating: 5.0,
     reviewsCount: 34,
@@ -294,7 +294,7 @@ export const PRODUCTS = [
     originalPrice: 2800,
     region: 'সুনামগঞ্জ',      
     emoji: '🌿', 
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Sheetal_Pati_Sunamganj.jpg/800px-Sheetal_Pati_Sunamganj.jpg',
+    image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80',
     heritage: true,  
     rating: 4.9,
     reviewsCount: 21,
@@ -313,7 +313,7 @@ export const PRODUCTS = [
     originalPrice: 1600,
     region: 'সিলেট',      
     emoji: '🌿', 
-    image: 'https://images.unsplash.com/photo-1590402494682-cd3fb53b1f70?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80',
     heritage: false,  
     rating: 4.8,
     reviewsCount: 16,
@@ -324,7 +324,7 @@ export const PRODUCTS = [
     desc: 'পূজা-পার্বণ, প্রার্থনা কিংবা ডাইনিং টেবিলের জন্য তৈরি প্রাকৃতিক শীতলপাটির বসার আসন ও রানার সেট।'            
   },
 
-  // 4. Pottery & Terracotta Products (Actual Somapura Mahavihara / Bangladeshi Clay Pottery)
+  // 4. Pottery & Terracotta Products
   { 
     id: 10,  
     artisanId: 7, 
@@ -334,7 +334,7 @@ export const PRODUCTS = [
     originalPrice: 1900,
     region: 'বগুড়া / পাহাড়পুর',       
     emoji: '🏺', 
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Terracotta_Plaque_Somapura_Mahavihara.jpg/800px-Terracotta_Plaque_Somapura_Mahavihara.jpg',
+    image: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=800&q=80',
     heritage: true, 
     rating: 5.0,
     reviewsCount: 41,
@@ -353,7 +353,7 @@ export const PRODUCTS = [
     originalPrice: 1250,
     region: 'রায়েরবাজার, ঢাকা', 
     emoji: '🏺', 
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Traditional_Pottery_Making_in_Bangladesh.jpg/800px-Traditional_Pottery_Making_in_Bangladesh.jpg',
+    image: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=800&q=80',
     heritage: true, 
     rating: 4.9,
     reviewsCount: 30,
@@ -372,7 +372,7 @@ export const PRODUCTS = [
     originalPrice: 1450,
     region: 'রায়েরবাজার, ঢাকা', 
     emoji: '🏺', 
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Clay_pots_in_rural_Bangladesh.jpg/800px-Clay_pots_in_rural_Bangladesh.jpg',
+    image: 'https://images.unsplash.com/photo-1612196808214-b8e1d6145a8c?auto=format&fit=crop&w=800&q=80',
     heritage: false, 
     rating: 4.7,
     reviewsCount: 57,
